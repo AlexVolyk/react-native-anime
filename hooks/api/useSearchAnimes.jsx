@@ -1,17 +1,18 @@
 import React from 'react'
 import { axiosConfig } from '../../axiosConfig'
 
-const useSearchAnimes = ({PER_PAGE, v, setLoading, setError, navigation}) => {
-    const uri = `anime/title/title/${v === '' ? 'all' : v}/0/${PER_PAGE}`
+const useSearchAnimes = ({ v, setLoading, setError, navigation }) => {
+    const uri = `anime/title/title/${v === '' ? 'all' : v}/0`
+
 
     function refetch() {
         setLoading(true)
-        axiosConfig.get(uri)
+        axiosConfig.post(uri)
             .then(res => {
                 res = res.data
-                // console.log(res.data)
+                // console.log(res.count)
                 setLoading(false)
-                if (res.result && res.count) {
+                if (res.result && res.totalAmount) {
                     navigation.navigate({
                         name: 'Animess',
                         params: {
@@ -22,7 +23,7 @@ const useSearchAnimes = ({PER_PAGE, v, setLoading, setError, navigation}) => {
                 }
             })
             .catch(err => {
-                // console.log(err.response.data.message);
+                console.log(JSON.stringify(err, null, 2), 'err ');
                 // console.log(typeof err,'err')
                 if (err.response.data.message) {
                     setError(err.response.data.message)
@@ -32,9 +33,9 @@ const useSearchAnimes = ({PER_PAGE, v, setLoading, setError, navigation}) => {
                 setLoading(false)
                 setTimeout(() => setError(false), 3000)
             })
-        }
-        
-    
+    }
+
+
     return {
         refetch
     }

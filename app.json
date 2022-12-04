@@ -2,7 +2,7 @@
   "expo": {
     "name": "rn-anime",
     "slug": "rn-anime",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/anime.png",
     "userInterfaceStyle": "light",
@@ -18,16 +18,23 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.kozaklyho.rnanime"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/anime.png",
         "backgroundColor": "#000000"
-      }
+      },
+      "package": "com.kozaklyho.rnanime"
     },
     "web": {
       "favicon": "./assets/anime.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "6286a5a3-9192-4d4b-86af-6245e2e8df3a"
+      }
     }
   }
 }

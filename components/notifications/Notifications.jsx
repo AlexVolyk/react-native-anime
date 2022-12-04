@@ -54,7 +54,7 @@ const style = StyleSheet.create({
         top: top ? top : 100,
         backgroundColor: '#ff0000',
         position: 'absolute',
-        zIndex: 100,
+        zIndex: 15,
         justifyContent: 'center',
         alignItems: 'center'
     }),
@@ -70,7 +70,7 @@ const style = StyleSheet.create({
         borderRadius: 4,
         backgroundColor: '#660000',
         position: 'absolute',
-        zIndex: 10,
+        zIndex: 11,
         shadowColor: 'white',
         shadowOffset: {
             width: 0,
@@ -84,7 +84,7 @@ const style = StyleSheet.create({
         height: 6,
         borderRadius: 4,
         backgroundColor: '#b30000',
-        zIndex: 10,
+        zIndex: 11,
         shadowColor: 'white',
         shadowOffset: {
             width: 0,

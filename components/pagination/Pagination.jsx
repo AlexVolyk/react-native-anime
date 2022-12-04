@@ -11,9 +11,16 @@ import * as _ from 'lodash'
 const Pagination = ({ perPage, amount, page, objNames, name, title }) => {
     // console.log(title);
     // console.log(perPage, amount, page, name);
+    // console.log(perPage, 'pagination');
+    if (perPage === null) {
+        return null
+    }
     const pagesGet = Math.ceil(amount / perPage)
 
     const [pages, setPages] = useState(_.range(0, pagesGet))
+    // const [isAboveZero, setIsAboveZero] = useState(false)
+    // console.log(pages);
+    // console.log(amount, 'amount');
     // const width = Dimensions.get('screen').width
     // console.log(width);
     // console.log(page, 'current_page');
@@ -21,6 +28,9 @@ const Pagination = ({ perPage, amount, page, objNames, name, title }) => {
     // console.log(pagesGet, 'pagesGet');
     useEffect(() => {
         setPages(_.range(0, pagesGet))
+        // if (condition) {
+
+        // }
     }, [amount, name])
 
 
@@ -55,6 +65,7 @@ const Pagination = ({ perPage, amount, page, objNames, name, title }) => {
 
 
     return (
+        // {
         <KeyboardAvoidingView behavior={'height'} style={{}}>
             <ScrollView
                 horizontal
@@ -64,7 +75,9 @@ const Pagination = ({ perPage, amount, page, objNames, name, title }) => {
                     // backgroundColor: 'red',
                     alignItems: 'flex-end',
                     justifyContent: 'flex-end',
-                    height: 56,
+                    height: pages.length > 1 ? 56 : 0,
+                    // height: 0 > 1 ? 56 : 0,
+                    // height: 56,
                     // flex: 1,
                     flexDirection: 'row',
                     justifyContent: 'center',
@@ -72,9 +85,18 @@ const Pagination = ({ perPage, amount, page, objNames, name, title }) => {
                 }} style={[style.pagination_inner,
                     //  {width: width}
                 ]}>
-                {pagination}
+                {
+                    // 0 > 1 && (
+                    //     pagination
+                    // )
+                    pages.length > 1 && (
+                        pagination
+                    )
+                }
             </ScrollView>
         </KeyboardAvoidingView>
+
+        // }
     )
 }
 

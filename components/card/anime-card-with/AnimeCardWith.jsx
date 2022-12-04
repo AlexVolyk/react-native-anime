@@ -31,7 +31,7 @@ const AnimeCardWith = ({ item }) => {
                     {/* <View layout entering={FadeIn} style={style.card}> */}
                     <View>
                         {
-                            item.recomennded === true && <Star top={10} right={10}/>
+                            item.recomennded === true && <Star top={10} right={10} />
                         }
                         <Link to={{
                             screen: 'Anime', params: {
@@ -41,7 +41,7 @@ const AnimeCardWith = ({ item }) => {
                         }}>
                             <CardInfo item={item} name={name} />
                         </Link>
-                        <Text onPress={oUrl} style={[style.anime_site, {flexWrap: 'wrap'}]}>
+                        <Text onPress={oUrl} style={[style.anime_site, { flexWrap: 'wrap' }]}>
                             {fw('Сайт: ')} {item.site}
                         </Text>
                     </View>

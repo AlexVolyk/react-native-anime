@@ -94,32 +94,32 @@ export default function Navigator() {
                         },
                     })} />
                     <Tab.Screen name={objNames.animesForWatchigns} component={AnimesCardWithoutTable}
-                        options={options('orange')} 
-                        // listeners={({ navigation, route }) => ({
-                        //     tabPress: e => {
-                        //         // console.log('e');
-                        //         // console.log(route.state.routes[0].params,'rrrrr');
-                        //         if (route.state && route?.state?.routes[0]?.params?.title) {
-                        //             // console.log('aaa');
-                        //             navigation.navigate(objNames.animesForWatchigns)
-                        //         }
-                        //     },
-                        // })}
-                        
-                        />
+                        options={options('orange')}
+                    // listeners={({ navigation, route }) => ({
+                    //     tabPress: e => {
+                    //         // console.log('e');
+                    //         // console.log(route.state.routes[0].params,'rrrrr');
+                    //         if (route.state && route?.state?.routes[0]?.params?.title) {
+                    //             // console.log('aaa');
+                    //             navigation.navigate(objNames.animesForWatchigns)
+                    //         }
+                    //     },
+                    // })}
+
+                    />
                     <Tab.Screen name={objNames.animesForCheckings} component={AnimesCardWithoutTable}
-                        options={options('orange')} 
-                        // listeners={({ navigation, route }) => ({
-                        //     tabPress: e => {
-                        //         // console.log('e');
-                        //         // console.log(route.state.routes[0].params,'rrrrr');
-                        //         if (route.state && route?.state?.routes[0]?.params?.title) {
-                        //             // console.log('aaa');
-                        //             navigation.navigate(objNames.animesForCheckings)
-                        //         }
-                        //     },
-                        // })}
-                        />
+                        options={options('orange')}
+                    // listeners={({ navigation, route }) => ({
+                    //     tabPress: e => {
+                    //         // console.log('e');
+                    //         // console.log(route.state.routes[0].params,'rrrrr');
+                    //         if (route.state && route?.state?.routes[0]?.params?.title) {
+                    //             // console.log('aaa');
+                    //             navigation.navigate(objNames.animesForCheckings)
+                    //         }
+                    //     },
+                    // })}
+                    />
                     {/* <Tab.Screen name={objNames.animesForWatchigns} component={AnimesCardWithoutTable}
                         options={options('orange')} /> */}
                     {/* <Tab.Screen name={objNames.animesStatistics} component={AnimesStatistics} options={options('orange')} /> */}

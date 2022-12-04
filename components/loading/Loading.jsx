@@ -21,7 +21,8 @@ const style = StyleSheet.create({
     height: '130%',
     width: '100%',
     backgroundColor: 'rgba(255,255,255,0.2)',
-    position: 'absolute'
+    position: 'absolute',
+    // top: -100
   }
 })
 

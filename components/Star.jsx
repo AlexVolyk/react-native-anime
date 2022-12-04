@@ -3,6 +3,7 @@ import { StyleSheet, View } from 'react-native'
 import Animated, { cancelAnimation, Easing, useAnimatedStyle, useSharedValue, withRepeat, withTiming } from 'react-native-reanimated'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
+
 const Star = ({ top, right, size }) => {
     const rotateX = useSharedValue(0)
     const rotateY = useSharedValue(0)
